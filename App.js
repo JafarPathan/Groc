@@ -10,20 +10,12 @@ import {
 } from 'react-native';
 import TransactionScreen from './screens/Transaction';
 import AccountScreen from './screens/Account';
+import HomeScreen from './screens/Home';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-function HomeScreen() {
-    return (
-        <View
-            style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Home!</Text>
-        </View>
-    );
-}
 
 const HomeStack = createStackNavigator();
 
