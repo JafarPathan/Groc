@@ -14,15 +14,26 @@ import HomeScreen from './screens/Home';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const Drawer = createDrawerNavigator();
+
+function HomeDrawer() {
+    return (
+        <Drawer.Navigator initialRouteName="Home">
+            <Drawer.Screen name="Home" component={HomeScreen} />
+        </Drawer.Navigator>
+    );
+}
 
 const HomeStack = createStackNavigator();
 
 function HomeStackScreen() {
     return (
         <HomeStack.Navigator>
-            <HomeStack.Screen name="Home" component={HomeScreen} />
+            <HomeStack.Screen name="Home" component={HomeDrawer} />
         </HomeStack.Navigator>
     );
 }

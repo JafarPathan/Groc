@@ -34,6 +34,19 @@ export default function AccountScreen() {
                     source={require('../images/profile3.png')}
                     style={{ width: '50%', height: 250 }}
                 />
+                <View
+                    style={{
+                        position: 'absolute',
+                        bottom: 0,
+                        right: 0
+                    }}>
+                    <IconButton
+                        icon="camera"
+                        color={Colors.black}
+                        size={30}
+                        onPress={() => console.log('Pressed')}
+                    />
+                </View>
             </View>
             <View style={{ alignItems: 'center', width: '100%', height: 40 }}>
                 <Text
@@ -109,7 +122,6 @@ export default function AccountScreen() {
                         Daily Needs
                     </Button>
                 </View>
-
                 <View
                     style={{
                         alignItems: 'center',
@@ -135,27 +147,51 @@ export default function AccountScreen() {
             </View>
             <View
                 style={{
+                    borderWidth: 1,
+                    borderRadius: 10,
                     position: 'absolute',
                     bottom: 0,
-                    left: 0
+                    left: 0,
+                    flexDirection: 'row'
                 }}>
                 <IconButton
-                    icon="setting"
-                    color={Colors.red500}
-                    size={30}
+                    icon={({ size, color }) => (
+                        <Image
+                            source={require('../images/setting1.png')}
+                            style={{
+                                width: 40,
+                                height: 35,
+                                tintColor: 'black'
+                            }}
+                        />
+                    )}
+                    color={Colors.black}
+                    size={25}
                     onPress={() => console.log('Pressed')}
                 />
             </View>
             <View
                 style={{
+                    borderWidth: 1,
+                    borderRadius: 10,
                     position: 'absolute',
                     bottom: 0,
-                    right: 0
+                    right: 0,
+                    flexDirection: 'row'
                 }}>
                 <IconButton
-                    icon="adads"
-                    color={Colors.red500}
-                    size={30}
+                    icon={({ size, color }) => (
+                        <Image
+                            source={require('../images/warning2.png')}
+                            style={{
+                                width: 40,
+                                height: 35,
+                                tintColor: 'black'
+                            }}
+                        />
+                    )}
+                    color={Colors.black}
+                    size={25}
                     onPress={() => console.log('Pressed')}
                 />
             </View>
